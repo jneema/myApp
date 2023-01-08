@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Profit</th>
+       
+    </tr>
+    <tr *ngFor="let sale of sales">
+        <td>{{ sale.id }}</td>
+        <td>{{ sale.Name }}</td>
+        <td>{{ sale.Quantity }}</td>
+        <td>{{ sale.Profit }}</td>
+    </tr>
+</table>
+<router-outlet></router-outlet>

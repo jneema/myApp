@@ -1,0 +1,26 @@
+<form [formGroup]="formGroup" #form="ngForm">
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Enter Product ID:</mat-label>
+      <mat-select *ngFor="let product of products">
+        <mat-option [value]="product.id">{{ product.id }}</mat-option>
+      </mat-select>
+      <input matInput ngForm formControlName="product_id">
+    </mat-form-field>
+    
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Enter Quantity:</mat-label>
+      <input matInput ngForm formControlName="quantity">
+    
+    </mat-form-field>
+<!-- 
+    <mat-form-field appearance="fill">
+      <mat-label>Enter Till Number</mat-label>
+      <input matInput ngForm formControlName="till">
+    
+    </mat-form-field> -->
+    
+    <button mat-raised-button color="primary" (click)="postSale(form)">Make Payment</button>
+</form>

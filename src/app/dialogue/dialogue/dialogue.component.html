@@ -1,0 +1,29 @@
+<form [formGroup]="formGroup" #form="ngForm" (ngSubmit)="postProduct(form)">
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Enter Product Name:</mat-label>
+  <input matInput ngForm formControlName="name">
+</mat-form-field>
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Enter Buying Price:</mat-label>
+  <input matInput ngForm formControlName="bp">
+
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Enter Selling Price:</mat-label>
+  <input matInput ngForm formControlName="sp">
+
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Enter Serial Number:</mat-label>
+  <input matInput ngForm formControlName="serial_no">
+
+</mat-form-field>
+
+<button mat-raised-button color="primary">Submit</button>
+</form>
